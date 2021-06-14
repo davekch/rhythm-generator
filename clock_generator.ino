@@ -3,13 +3,15 @@ int TIMEDELTA = 9;   // resolution in ms
 int OPIN1 = 7;
 int OPIN2 = 8;
 int OPIN3 = 4;
+int OPIN_SYNC = 9;
 int IPIN_GATEMODE = 2;
 
-int STEP = 10;   // time in TIMEDELTA * ms it takes for the clock to advance
+int STEP = 20;   // time in TIMEDELTA * ms it takes for the clock to advance
+int clock0 = 0;
 int clock1 = 0;
 int clock2 = 0;
 int division1 = 4;
-int division2 = 6;
+int division2 = 5;
 
 bool gatemodebutton_pressed = false;
 bool gatemode = true;
@@ -20,6 +22,7 @@ void setup() {
   pinMode(OPIN1, OUTPUT);
   pinMode(OPIN2, OUTPUT);
   pinMode(OPIN3, OUTPUT);
+  pinMode(OPIN_SYNC, OUTPUT);
   pinMode(IPIN_GATEMODE, INPUT);
 }
 
@@ -36,6 +39,9 @@ void loop() {
     }
   }
 
+  if (clock0 == 0) {
+    digitalWrite(OPIN_SYNC, HIGH);
+  }
   if (clock1 == 0) {
     digitalWrite(OPIN1, HIGH);
   }
@@ -66,8 +72,10 @@ void loop() {
     digitalWrite(OPIN2, LOW);
     digitalWrite(OPIN3, LOW);
   }
+  digitalWrite(OPIN_SYNC, LOW);
 
   // move clocks forward
+  clock0 = (clock0 + 1) % STEP;
   clock1 = (clock1 + 1) % (STEP * division1);
   clock2 = (clock2 + 1) % (STEP * division2);
 }
