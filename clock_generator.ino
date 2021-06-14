@@ -1,17 +1,21 @@
 // 9ms seems to be the shortest time in which the digital out rises over the required 3.3V
 int TIMEDELTA = 9;   // resolution in ms
+bool DEBUG = true;
 int OPIN1 = 7;
 int OPIN2 = 8;
 int OPIN3 = 4;
 int OPIN_SYNC = 9;
 int IPIN_GATEMODE = 2;
+int IPIN_TEMPO = 2;
 
 int STEP = 20;   // time in TIMEDELTA * ms it takes for the clock to advance
+int STEP_MIN = 5;
+int STEP_MAX = 100;
 int clock0 = 0;
 int clock1 = 0;
 int clock2 = 0;
 int division1 = 4;
-int division2 = 5;
+int division2 = 3;
 
 bool gatemodebutton_pressed = false;
 bool gatemode = true;
@@ -24,6 +28,7 @@ void setup() {
   pinMode(OPIN3, OUTPUT);
   pinMode(OPIN_SYNC, OUTPUT);
   pinMode(IPIN_GATEMODE, INPUT);
+  if (DEBUG) Serial.begin(9600);
 }
 
 void loop() {
@@ -38,6 +43,10 @@ void loop() {
       gatemodebutton_pressed = false;
     }
   }
+  // set tempo according to knob
+  int tempoval = analogRead(IPIN_TEMPO);
+  STEP = map(tempoval, 0, 1023, STEP_MIN, STEP_MAX);
+  if (DEBUG) Serial.println(tempoval);
 
   if (clock0 == 0) {
     digitalWrite(OPIN_SYNC, HIGH);
