@@ -20,7 +20,6 @@ int clock2 = 0;
 int division1 = 8;
 int division2 = 4;
 
-bool gatemodebutton_pressed = false;
 bool gatemode = false;
 bool resetbutton_pressed = false;
 
@@ -37,17 +36,8 @@ void setup() {
 }
 
 void loop() {
-  // check if the gatemode button is being released
-  int buttonState_gate = digitalRead(IPIN_GATEMODE);
-  if (buttonState_gate == HIGH) {
-    gatemodebutton_pressed = true;
-  } else {
-    if (gatemodebutton_pressed) {
-      // the button was pressed and is now released
-      gatemode = !gatemode;
-      gatemodebutton_pressed = false;
-    }
-  }
+  // check position of gatemode switch
+  gatemode = digitalRead(IPIN_GATEMODE) == HIGH;
   // check if the reset button is being released
   int buttonState_reset = digitalRead(IPIN_RESET);
   if (buttonState_reset == HIGH) {
