@@ -8,10 +8,12 @@ int OPIN_SYNC = 9;
 int IPIN_GATEMODE = 2;
 int IPIN_RESET = 3;
 int IPIN_TEMPO = 2;
+int IPIN_DIV1 = 1;
+int IPIN_DIV2 = 0;
 
 int STEP = 20;   // time in TIMEDELTA * ms it takes for the clock to advance
-int STEP_MIN = 2;
-int STEP_MAX = 50;
+int STEP_MIN = 1;
+int STEP_MAX = 30;
 int clock0 = 0;
 int clock1 = 0;
 int clock2 = 0;
@@ -63,7 +65,14 @@ void loop() {
   // set tempo according to knob
   int tempoval = analogRead(IPIN_TEMPO);
   STEP = map(tempoval, 0, 1023, STEP_MIN, STEP_MAX);
-  if (DEBUG) Serial.println(tempoval);
+//  if (DEBUG) Serial.println(tempoval);
+  // set division1 according to knob
+  int div1val = analogRead(IPIN_DIV1);
+  division1 = map(div1val, 0, 1023, 16, 1);
+  // set division2 according to knob
+  int div2val = analogRead(IPIN_DIV2);
+  division2 = map(div2val, 0, 1023, 16, 1);
+  if (DEBUG) Serial.println("step: " + String(STEP) + " div1: " + String(division1) + " div2: " + String(division2));
 
   if (clock0 == 0) {
     digitalWrite(OPIN_SYNC, HIGH);
