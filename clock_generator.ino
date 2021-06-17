@@ -6,19 +6,21 @@ int OPIN2 = 8;
 int OPIN3 = 4;
 int OPIN_SYNC = 9;
 int IPIN_GATEMODE = 2;
+int IPIN_RESET = 3;
 int IPIN_TEMPO = 2;
 
 int STEP = 20;   // time in TIMEDELTA * ms it takes for the clock to advance
-int STEP_MIN = 5;
-int STEP_MAX = 100;
+int STEP_MIN = 2;
+int STEP_MAX = 50;
 int clock0 = 0;
 int clock1 = 0;
 int clock2 = 0;
-int division1 = 4;
-int division2 = 3;
+int division1 = 8;
+int division2 = 4;
 
 bool gatemodebutton_pressed = false;
-bool gatemode = true;
+bool gatemode = false;
+bool resetbutton_pressed = false;
 
 
 void setup() {
@@ -28,19 +30,34 @@ void setup() {
   pinMode(OPIN3, OUTPUT);
   pinMode(OPIN_SYNC, OUTPUT);
   pinMode(IPIN_GATEMODE, INPUT);
+  pinMode(IPIN_RESET, INPUT);
   if (DEBUG) Serial.begin(9600);
 }
 
 void loop() {
   // check if the gatemode button is being released
-  int buttonState = digitalRead(IPIN_GATEMODE);
-  if (buttonState == HIGH) {
+  int buttonState_gate = digitalRead(IPIN_GATEMODE);
+  if (buttonState_gate == HIGH) {
     gatemodebutton_pressed = true;
   } else {
     if (gatemodebutton_pressed) {
       // the button was pressed and is now released
       gatemode = !gatemode;
       gatemodebutton_pressed = false;
+    }
+  }
+  // check if the reset button is being released
+  int buttonState_reset = digitalRead(IPIN_RESET);
+  if (buttonState_reset == HIGH) {
+    resetbutton_pressed = true;
+  } else {
+    if (resetbutton_pressed) {
+      // the button was pressed and is now released
+      resetbutton_pressed = false;
+      // reset the clocks
+      clock0 = 0;
+      clock1 = 0;
+      clock2 = 0;
     }
   }
   // set tempo according to knob
