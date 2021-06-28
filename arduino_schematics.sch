@@ -1,0 +1,475 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	6750 3650 6350 3650
+Wire Wire Line
+	6750 3550 5400 3550
+Wire Wire Line
+	6750 3450 4500 3450
+Wire Wire Line
+	3350 3150 6750 3150
+Wire Wire Line
+	6350 3650 6350 3800
+$Comp
+L Device:LED D1
+U 1 1 60DACC5C
+P 6350 4300
+F 0 "D1" V 6389 4182 50  0000 R CNN
+F 1 "LED" V 6298 4182 50  0000 R CNN
+F 2 "" H 6350 4300 50  0001 C CNN
+F 3 "~" H 6350 4300 50  0001 C CNN
+	1    6350 4300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 60DAAACF
+P 6350 4000
+F 0 "R1" H 6420 4046 50  0000 L CNN
+F 1 "330" H 6420 3955 50  0000 L CNN
+F 2 "" V 6280 4000 50  0001 C CNN
+F 3 "~" H 6350 4000 50  0001 C CNN
+	1    6350 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 4450 6350 4600
+$Comp
+L Device:LED D2
+U 1 1 60DBDF3C
+P 5400 4300
+F 0 "D2" V 5439 4182 50  0000 R CNN
+F 1 "LED" V 5348 4182 50  0000 R CNN
+F 2 "" H 5400 4300 50  0001 C CNN
+F 3 "~" H 5400 4300 50  0001 C CNN
+	1    5400 4300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 60DBDF42
+P 5400 4000
+F 0 "R2" H 5470 4046 50  0000 L CNN
+F 1 "330" H 5470 3955 50  0000 L CNN
+F 2 "" V 5330 4000 50  0001 C CNN
+F 3 "~" H 5400 4000 50  0001 C CNN
+	1    5400 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 60DC39E4
+P 4500 4300
+F 0 "D3" V 4539 4182 50  0000 R CNN
+F 1 "LED" V 4448 4182 50  0000 R CNN
+F 2 "" H 4500 4300 50  0001 C CNN
+F 3 "~" H 4500 4300 50  0001 C CNN
+	1    4500 4300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 60DC39EA
+P 4500 4000
+F 0 "R3" H 4570 4046 50  0000 L CNN
+F 1 "330" H 4570 3955 50  0000 L CNN
+F 2 "" V 4430 4000 50  0001 C CNN
+F 3 "~" H 4500 4000 50  0001 C CNN
+	1    4500 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 3450 4500 3800
+Wire Wire Line
+	4500 4450 4500 4600
+$Comp
+L Device:LED D4
+U 1 1 60DC5FEE
+P 3350 4300
+F 0 "D4" V 3389 4182 50  0000 R CNN
+F 1 "LED" V 3298 4182 50  0000 R CNN
+F 2 "" H 3350 4300 50  0001 C CNN
+F 3 "~" H 3350 4300 50  0001 C CNN
+	1    3350 4300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 60DC5FF4
+P 3350 4000
+F 0 "R4" H 3420 4046 50  0000 L CNN
+F 1 "330" H 3420 3955 50  0000 L CNN
+F 2 "" V 3280 4000 50  0001 C CNN
+F 3 "~" H 3350 4000 50  0001 C CNN
+	1    3350 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 4450 3350 4600
+Wire Wire Line
+	3350 3150 3350 3800
+$Comp
+L Connector:AudioJack2 J1
+U 1 1 60DC8328
+P 5950 4150
+F 0 "J1" H 5771 4133 50  0001 R CNN
+F 1 "sync out" H 6050 4000 50  0000 R CNN
+F 2 "" H 5950 4150 50  0001 C CNN
+F 3 "~" H 5950 4150 50  0001 C CNN
+	1    5950 4150
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	6150 4150 6150 3800
+Wire Wire Line
+	6150 3800 6350 3800
+Connection ~ 6350 3800
+Wire Wire Line
+	6350 3800 6350 3850
+Wire Wire Line
+	6150 4250 6150 4600
+Wire Wire Line
+	6150 4600 6350 4600
+Connection ~ 6350 4600
+$Comp
+L Connector:AudioJack2 J?
+U 1 1 60DD69B9
+P 5000 4150
+F 0 "J?" H 4821 4133 50  0001 R CNN
+F 1 "rhythm 2" H 5100 4000 50  0000 R CNN
+F 2 "" H 5000 4150 50  0001 C CNN
+F 3 "~" H 5000 4150 50  0001 C CNN
+	1    5000 4150
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	5200 4150 5200 3800
+Wire Wire Line
+	5200 4250 5200 4600
+Wire Wire Line
+	5400 4450 5400 4600
+Wire Wire Line
+	5400 3550 5400 3800
+Wire Wire Line
+	5200 3800 5400 3800
+Connection ~ 5400 3800
+Wire Wire Line
+	5400 3800 5400 3850
+Wire Wire Line
+	5200 4600 5400 4600
+Connection ~ 5400 4600
+Wire Wire Line
+	5400 4600 5400 4800
+$Comp
+L Connector:AudioJack2 J?
+U 1 1 60DE15A1
+P 4000 4150
+F 0 "J?" H 3821 4133 50  0001 R CNN
+F 1 "rhythm 1" H 4100 4000 50  0000 R CNN
+F 2 "" H 4000 4150 50  0001 C CNN
+F 3 "~" H 4000 4150 50  0001 C CNN
+	1    4000 4150
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4200 4150 4200 3800
+Wire Wire Line
+	4200 4250 4200 4600
+Wire Wire Line
+	4200 3800 4500 3800
+Connection ~ 4500 3800
+Wire Wire Line
+	4500 3800 4500 3850
+Wire Wire Line
+	4200 4600 4500 4600
+Connection ~ 4500 4600
+Wire Wire Line
+	4500 4600 4500 4800
+$Comp
+L Connector:AudioJack2 J?
+U 1 1 60DE44D6
+P 2850 4150
+F 0 "J?" H 2671 4133 50  0001 R CNN
+F 1 "rhythm 1 & 2" H 2950 4000 50  0000 R CNN
+F 2 "" H 2850 4150 50  0001 C CNN
+F 3 "~" H 2850 4150 50  0001 C CNN
+	1    2850 4150
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	3050 4150 3050 3800
+Wire Wire Line
+	3050 4250 3050 4600
+Wire Wire Line
+	3050 3800 3350 3800
+Connection ~ 3350 3800
+Wire Wire Line
+	3350 3800 3350 3850
+Wire Wire Line
+	3050 4600 3350 4600
+Connection ~ 3350 4600
+Wire Wire Line
+	3350 4600 3350 4800
+Wire Wire Line
+	6350 4600 6350 4800
+$Comp
+L power:Earth #PWR?
+U 1 1 60DF120C
+P 6350 4800
+F 0 "#PWR?" H 6350 4550 50  0001 C CNN
+F 1 "Earth" H 6350 4650 50  0001 C CNN
+F 2 "" H 6350 4800 50  0001 C CNN
+F 3 "~" H 6350 4800 50  0001 C CNN
+	1    6350 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR?
+U 1 1 60DF15A1
+P 5400 4800
+F 0 "#PWR?" H 5400 4550 50  0001 C CNN
+F 1 "Earth" H 5400 4650 50  0001 C CNN
+F 2 "" H 5400 4800 50  0001 C CNN
+F 3 "~" H 5400 4800 50  0001 C CNN
+	1    5400 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR?
+U 1 1 60DF2359
+P 4500 4800
+F 0 "#PWR?" H 4500 4550 50  0001 C CNN
+F 1 "Earth" H 4500 4650 50  0001 C CNN
+F 2 "" H 4500 4800 50  0001 C CNN
+F 3 "~" H 4500 4800 50  0001 C CNN
+	1    4500 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR?
+U 1 1 60DF26B2
+P 3350 4800
+F 0 "#PWR?" H 3350 4550 50  0001 C CNN
+F 1 "Earth" H 3350 4650 50  0001 C CNN
+F 2 "" H 3350 4800 50  0001 C CNN
+F 3 "~" H 3350 4800 50  0001 C CNN
+	1    3350 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 60DFE334
+P 8150 3500
+F 0 "#PWR?" H 8150 3350 50  0001 C CNN
+F 1 "+5V" H 8165 3673 50  0000 C CNN
+F 2 "" H 8150 3500 50  0001 C CNN
+F 3 "" H 8150 3500 50  0001 C CNN
+	1    8150 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:Earth #PWR?
+U 1 1 60DFB52F
+P 8150 3200
+F 0 "#PWR?" H 8150 2950 50  0001 C CNN
+F 1 "Earth" H 8150 3050 50  0001 C CNN
+F 2 "" H 8150 3200 50  0001 C CNN
+F 3 "~" H 8150 3200 50  0001 C CNN
+	1    8150 3200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7750 3350 8000 3350
+$Comp
+L Device:R_POT RV_div2
+U 1 1 60DF8CB0
+P 8150 3350
+F 0 "RV_div2" H 8080 3304 50  0000 R CNN
+F 1 "20k" H 8080 3395 50  0000 R CNN
+F 2 "" H 8150 3350 50  0001 C CNN
+F 3 "~" H 8150 3350 50  0001 C CNN
+	1    8150 3350
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 60E02684
+P 8450 3900
+F 0 "#PWR?" H 8450 3750 50  0001 C CNN
+F 1 "+5V" H 8465 4073 50  0000 C CNN
+F 2 "" H 8450 3900 50  0001 C CNN
+F 3 "" H 8450 3900 50  0001 C CNN
+	1    8450 3900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:Earth #PWR?
+U 1 1 60E0268A
+P 8450 3600
+F 0 "#PWR?" H 8450 3350 50  0001 C CNN
+F 1 "Earth" H 8450 3450 50  0001 C CNN
+F 2 "" H 8450 3600 50  0001 C CNN
+F 3 "~" H 8450 3600 50  0001 C CNN
+	1    8450 3600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_POT RV_div1
+U 1 1 60E02690
+P 8450 3750
+F 0 "RV_div1" H 8380 3704 50  0000 R CNN
+F 1 "20k" H 8380 3795 50  0000 R CNN
+F 2 "" H 8450 3750 50  0001 C CNN
+F 3 "~" H 8450 3750 50  0001 C CNN
+	1    8450 3750
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 60E035B2
+P 8800 4300
+F 0 "#PWR?" H 8800 4150 50  0001 C CNN
+F 1 "+5V" H 8815 4473 50  0000 C CNN
+F 2 "" H 8800 4300 50  0001 C CNN
+F 3 "" H 8800 4300 50  0001 C CNN
+	1    8800 4300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:Earth #PWR?
+U 1 1 60E035B8
+P 8800 4000
+F 0 "#PWR?" H 8800 3750 50  0001 C CNN
+F 1 "Earth" H 8800 3850 50  0001 C CNN
+F 2 "" H 8800 4000 50  0001 C CNN
+F 3 "~" H 8800 4000 50  0001 C CNN
+	1    8800 4000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_POT RV_tempo
+U 1 1 60E035BE
+P 8800 4150
+F 0 "RV_tempo" H 8730 4104 50  0000 R CNN
+F 1 "20k" H 8730 4195 50  0000 R CNN
+F 2 "" H 8800 4150 50  0001 C CNN
+F 3 "~" H 8800 4150 50  0001 C CNN
+	1    8800 4150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7750 3450 7950 3450
+Wire Wire Line
+	7950 3450 7950 3750
+Wire Wire Line
+	7950 3750 8300 3750
+Wire Wire Line
+	7750 3550 7850 3550
+Wire Wire Line
+	7850 3550 7850 4150
+Wire Wire Line
+	7850 4150 8650 4150
+Wire Wire Line
+	6750 3050 5350 3050
+$Comp
+L Switch:SW_Push SW_1
+U 1 1 60E102CF
+P 4700 2900
+F 0 "SW_1" H 4700 3185 50  0000 C CNN
+F 1 "reset" H 4700 3094 50  0000 C CNN
+F 2 "" H 4700 3100 50  0001 C CNN
+F 3 "~" H 4700 3100 50  0001 C CNN
+	1    4700 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 3050 5350 2900
+$Comp
+L power:+5V #PWR?
+U 1 1 60E1ED4C
+P 4500 2900
+F 0 "#PWR?" H 4500 2750 50  0001 C CNN
+F 1 "+5V" V 4515 3028 50  0000 L CNN
+F 2 "" H 4500 2900 50  0001 C CNN
+F 3 "" H 4500 2900 50  0001 C CNN
+	1    4500 2900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:Earth #PWR?
+U 1 1 60E2329B
+P 5050 2600
+F 0 "#PWR?" H 5050 2350 50  0001 C CNN
+F 1 "Earth" H 5050 2450 50  0001 C CNN
+F 2 "" H 5050 2600 50  0001 C CNN
+F 3 "~" H 5050 2600 50  0001 C CNN
+	1    5050 2600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4900 2900 5050 2900
+$Comp
+L Device:R R5
+U 1 1 60E2289B
+P 5050 2750
+F 0 "R5" H 5120 2796 50  0000 L CNN
+F 1 "10k" H 5120 2705 50  0000 L CNN
+F 2 "" V 4980 2750 50  0001 C CNN
+F 3 "~" H 5050 2750 50  0001 C CNN
+	1    5050 2750
+	1    0    0    -1  
+$EndComp
+Connection ~ 5050 2900
+Wire Wire Line
+	5050 2900 5350 2900
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A?
+U 1 1 60DA392D
+P 7250 3350
+F 0 "A?" H 7250 2261 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 7250 2170 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 7250 3350 50  0001 C CIN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 7250 3350 50  0001 C CNN
+	1    7250 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 2950 6750 2950
+$Comp
+L Switch:SW_DIP_x01 SW1
+U 1 1 60E3A4A6
+P 5900 2650
+F 0 "SW1" V 5946 2520 50  0000 R CNN
+F 1 "gatemode" V 5855 2520 50  0000 R CNN
+F 2 "" H 5900 2650 50  0001 C CNN
+F 3 "~" H 5900 2650 50  0001 C CNN
+	1    5900 2650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 60E41CC4
+P 5900 2350
+F 0 "#PWR?" H 5900 2200 50  0001 C CNN
+F 1 "+5V" H 5915 2523 50  0000 C CNN
+F 2 "" H 5900 2350 50  0001 C CNN
+F 3 "" H 5900 2350 50  0001 C CNN
+	1    5900 2350
+	1    0    0    -1  
+$EndComp
+Text Notes 7400 7500 0    50   ~ 0
+clock generator
+$EndSCHEMATC
