@@ -54,14 +54,14 @@ void loop() {
   }
   // set tempo according to knob
   int tempoval = analogRead(IPIN_TEMPO);
-  STEP = map(tempoval, 0, 1023, STEP_MAX, STEP_MIN);
+  STEP = map(tempoval, 0, 1023, STEP_MIN, STEP_MAX);
 //  if (DEBUG) Serial.println(tempoval);
   // set division1 according to knob
   int div1val = analogRead(IPIN_DIV1);
-  division1 = map(div1val, 0, 1023, 1, 16);
+  division1 = map(div1val, 0, 1023, 16, 1);
   // set division2 according to knob
   int div2val = analogRead(IPIN_DIV2);
-  division2 = map(div2val, 0, 1023, 1, 16);
+  division2 = map(div2val, 0, 1023, 16, 1);
   if (DEBUG) Serial.println("step: " + String(STEP) + " div1: " + String(division1) + " div2: " + String(division2));
 
   if (clock0 == 0) {
